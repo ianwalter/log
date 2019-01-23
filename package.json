@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "dist/log.js",
   "scripts": {
-    "lint": "eslint index.js test.js",
+    "lint": "eslint index.js test",
     "pretest": "dist",
     "test": "ava"
   },
@@ -27,6 +27,9 @@
     "url": "https://github.com/ianwalter/log/issues"
   },
   "homepage": "https://github.com/ianwalter/log#readme",
+  "dependencies": {
+    "@ianwalter/clone": "^2.0.1"
+  },
   "devDependencies": {
     "@ianwalter/dist": "^1.4.0",
     "ava": "^1.1.0",
@@ -36,7 +39,9 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "np": "^4.0.1"
+    "mock-stdio": "^1.0.3",
+    "np": "^4.0.1",
+    "signale": "^1.3.0"
   },
   "eslintConfig": {
     "root": true,
