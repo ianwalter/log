@@ -11,7 +11,7 @@ yarn add @ianwalter/log
 
 ## Usage
 
-Basic:
+### Basic
 
 ```js
 import log from '@ianwalter/log'
@@ -21,7 +21,7 @@ log.update({ level: 'warn' })
 log.warn('Such logging!')
 ```
 
-Using a custom logger (e.g. [signale][signaleUrl]):
+### Using a custom logger (e.g. [signale][signaleUrl])
 
 ```js
 import log from '@ianwalter/log'
