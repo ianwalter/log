@@ -1,6 +1,8 @@
 # @ianwalter/log
 > A tiny level-based console logger
 
+[![npm page][npmImage]][npmUrl]
+
 ## Installation
 
 ```console
