@@ -32,6 +32,16 @@ log.update({ types: Object.keys(signale._types), logger: signale })
 log.complete('log can be used with signale')
 ```
 
+### Creating a separate, local logger
+
+```js
+import log from '@ianwalter/log'
+
+const localLog = log.create({ level: 'debug' })
+
+localLog.debug('I am a debug statemnt')
+```
+
 ## License
 
 Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
