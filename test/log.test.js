@@ -23,7 +23,9 @@ test('works with signale', t => {
   mockStdio.start()
   log.update({ types: Object.keys(signale._types), logger: signale })
   log.success('Whoop! Whoop!')
-  t.snapshot(mockStdio.end())
+  const { stdout } = mockStdio.end()
+  t.true(stdout.includes('✔'))
+  t.true(stdout.includes('Whoop! Whoop!'))
 })
 
 test('creating a new log instance', t => {
