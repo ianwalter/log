@@ -1,10 +1,16 @@
 {
   "name": "@ianwalter/log",
+  "description": "A tiny level-based console logger",
   "main": "dist/log.js",
   "scripts": {
     "pretest": "dist",
     "test": "ava"
   },
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@ianwalter/dist": "^1.4.0",
     "ava": "^1.1.0",
