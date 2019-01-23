@@ -21,4 +21,3 @@ test('log level', t => {
 
   t.is(loggedMsg, msg)
 })
-
