@@ -7,7 +7,7 @@ const defaultOptions = {
   level: 'info'
 }
 
-class Log {
+export class Log {
   constructor (options = {}) {
     // Set the log options.
     this.options = Object.assign({}, defaultOptions, options)
@@ -44,4 +44,4 @@ class Log {
 }
 
 // Export a global log instance.
-export default new Log()
+export const log = new Log()
