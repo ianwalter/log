@@ -3,6 +3,7 @@
   "description": "A tiny level-based console logger",
   "version": "2.0.0",
   "main": "dist/log.js",
+  "module": "dist/log.m.js",
   "scripts": {
     "lint": "eslint index.js test",
     "pretest": "dist",
@@ -27,9 +28,6 @@
     "url": "https://github.com/ianwalter/log/issues"
   },
   "homepage": "https://github.com/ianwalter/log#readme",
-  "dependencies": {
-    "@ianwalter/clone": "^2.0.1"
-  },
   "devDependencies": {
     "@ianwalter/dist": "^3.0.0",
     "@ianwalter/eslint-config": "^1.0.0",

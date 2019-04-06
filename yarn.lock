@@ -377,11 +377,6 @@
   dependencies:
     arrify "^1.0.1"
 
-"@ianwalter/clone@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@ianwalter/clone/-/clone-2.0.1.tgz#c9f37e2d13e386d3a63e632e6a6199fd44d71bed"
-  integrity sha512-SiDz8Vh59ZzQk98HKxf54j5D/ER0hV8hPU78Lw5I5YzdJJUQK/pZGBQJO0bfJsNVmy8eAbjYR7N1IR0Mn1qsNg==
-
 "@ianwalter/dist@^3.0.0":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@ianwalter/dist/-/dist-3.0.1.tgz#d453e6d60c8af145183fdd7bd695b791f0a98410"

@@ -1,5 +1,3 @@
-import clone from '@ianwalter/clone'
-
 // Create the default log levels and options.
 const levels = ['debug', 'info', 'warn', 'error', 'fatal']
 const defaultOptions = {
@@ -11,9 +9,8 @@ const defaultOptions = {
 
 class Log {
   constructor (options = {}) {
-    // Set the log options by merging a clone of the default options with the
-    // given options.
-    this.options = Object.assign(clone(defaultOptions), options)
+    // Set the log options.
+    this.options = Object.assign({}, defaultOptions, options)
 
     // Loop through all of the log types, adding a function to the log instance
     // based on the type name, e.g. log.debug, log.info, etc.
