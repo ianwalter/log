@@ -39,7 +39,7 @@ import log from '@ianwalter/log'
 
 const localLog = log.create({ level: 'debug' })
 
-localLog.debug('I am a debug statemnt')
+localLog.debug('I am a debug statement')
 ```
 
 ## License
