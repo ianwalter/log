@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`log level 1`] = `
+Object {
+  "stderr": "I am the warrior!
+",
+  "stdout": "",
+}
+`;
+
+exports[`logger 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "YO!
+",
+}
+`;
