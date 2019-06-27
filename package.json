@@ -30,7 +30,7 @@
   "homepage": "https://github.com/ianwalter/log#readme",
   "devDependencies": {
     "@ianwalter/bff": "^6.3.1",
-    "@ianwalter/dist": "^4.0.0",
+    "@ianwalter/dist": "^5.0.1",
     "@ianwalter/eslint-config": "^2.0.1",
     "@ianwalter/renovate-config": "^1.1.1",
     "mock-stdio": "^1.0.3",
