@@ -31,7 +31,7 @@
   "devDependencies": {
     "@ianwalter/bff": "^6.4.0",
     "@ianwalter/dist": "^5.2.0",
-    "@ianwalter/eslint-config": "^2.3.0",
+    "@ianwalter/eslint-config": "^2.4.0",
     "@ianwalter/release": "^1.1.10",
     "@ianwalter/renovate-config": "^1.1.1",
     "mock-stdio": "^1.0.3",
