@@ -3,7 +3,14 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 // Create the default log levels and options.
-const levels = ['debug', 'info', 'warn', 'error', 'fatal'];
+const levels = [
+  'debug', // For debugging code through log statements.
+  'info', // For general logging statements.
+  'warn', // Warn 'em Cassandra.
+  'error', // For normal errors.
+  'fatal', // For unrecoverable errors.
+  'write' // For writing statements not bound by a log level.
+];
 const defaultOptions = {
   levels,
   types: levels,
