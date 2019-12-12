@@ -33,7 +33,7 @@ class Log {
         const typeIndex = this.options.levels.indexOf(type);
         const levelIndex = this.options.levels.indexOf(this.options.level);
         if (typeIndex === -1 || typeIndex >= levelIndex) {
-          this.options.logger[type](...items);
+          return this.options.logger[type](...items)
         }
       };
     });

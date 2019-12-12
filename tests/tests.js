@@ -42,3 +42,15 @@ test('Log is the Log class', ({ expect }) => {
   const logInstance = new Log()
   expect(logInstance.constructor.name).toBe('Log')
 })
+
+test('returns what logger returns', ({ expect }) => {
+  const log = new Log({
+    logger: {
+      info (msg) {
+        return msg
+      }
+    }
+  })
+  const msg = 'Elizabeth Warren for President'
+  expect(log.info(msg)).toBe(msg)
+})
