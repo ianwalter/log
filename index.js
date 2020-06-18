@@ -72,7 +72,7 @@ function createLog (options = {}) {
       return this
     },
     ns (namespace) {
-      return createLog(merge({}, this.options, { namespace }))
+      return this.create(merge({}, this.options, { namespace }))
     }
   }
 
