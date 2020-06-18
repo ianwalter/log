@@ -1,7 +1,7 @@
 {
   "name": "@ianwalter/log",
   "description": "A tiny level-based console logger",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "main": "dist/log.js",
   "module": "dist/log.m.js",
   "scripts": {
