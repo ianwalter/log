@@ -28,6 +28,10 @@
     "url": "https://github.com/ianwalter/log/issues"
   },
   "homepage": "https://github.com/ianwalter/log#readme",
+  "dependencies": {
+    "@ianwalter/dot": "^1.0.1",
+    "@ianwalter/merge": "^9.0.1"
+  },
   "devDependencies": {
     "@ianwalter/bff": "^9.9.1",
     "@ianwalter/dist": "^6.0.0",

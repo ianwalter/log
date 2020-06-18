@@ -1,50 +1,39 @@
 const { test } = require('@ianwalter/bff')
 const mockStdio = require('mock-stdio')
 const signale = require('signale')
-const { log, Log } = require('..')
+const log = require('..')
 
-test('logger', ({ expect }) => {
-  log.update()
+test('logger', t => {
   mockStdio.start()
   log.info('YO!')
-  expect(mockStdio.end()).toMatchSnapshot()
+  t.expect(mockStdio.end()).toMatchSnapshot()
 })
 
-test('log level', ({ expect }) => {
-  log.update()
+test('log level', t => {
   mockStdio.start()
   log.update({ level: 'warn' })
   log.warn('I am the warrior!')
   log.info('Moonbeam')
-  expect(mockStdio.end()).toMatchSnapshot()
+  t.expect(mockStdio.end()).toMatchSnapshot()
 })
 
-test('works with signale', ({ expect }) => {
-  log.update()
+test('works with signale', t => {
   mockStdio.start()
   log.update({ types: Object.keys(signale._types), logger: signale })
   log.success('Whoop! Whoop!')
   const { stdout } = mockStdio.end()
-  expect(stdout).toContain('✔')
-  expect(stdout).toContain('Whoop! Whoop!')
+  t.expect(stdout).toContain('✔')
+  t.expect(stdout).toContain('Whoop! Whoop!')
 })
 
-test('creating a new log instance', ({ expect }) => {
-  log.update()
+test('creating a new log instance', t => {
   const warnLog = log.create({ level: 'warn' })
-  expect(log.options.level).toBe('info')
-  expect(warnLog.options.level).toBe('warn')
+  t.expect(log.options.level).toBe('info')
+  t.expect(warnLog.options.level).toBe('warn')
 })
 
-test('Log is the Log class', ({ expect }) => {
-  log.update()
-  expect(Log.name).toBe('Log')
-  const logInstance = new Log()
-  expect(logInstance.constructor.name).toBe('Log')
-})
-
-test('returns what logger returns', ({ expect }) => {
-  const log = new Log({
+test('returns what logger returns', t => {
+  const returnLog = log.create({
     logger: {
       info (msg) {
         return msg
@@ -52,5 +41,21 @@ test('returns what logger returns', ({ expect }) => {
     }
   })
   const msg = 'Elizabeth Warren for President'
-  expect(log.info(msg)).toBe(msg)
+  t.expect(returnLog.info(msg)).toBe(msg)
+})
+
+test('allowedNamespace', t => {
+  const general = log.create({
+    allowedNamespace: 'server.*',
+    logger: {
+      debug (msg) {
+        return msg
+      }
+    }
+  })
+  t.expect(general.debug('TEST1')).toBeUndefined()
+  t.expect(general.ns('server.workers').debug('TEST2')).toBe('TEST2')
+  t.expect(general.debug('TEST3')).toBeUndefined()
+  general.update({ namespace: 'server.middleware' })
+  t.expect(general.debug('TEST4')).toBe('TEST4')
 })

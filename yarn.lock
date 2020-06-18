@@ -357,6 +357,11 @@
     rollup-plugin-node-resolve "^5.2.0"
     rollup-plugin-terser "^5.2.0"
 
+"@ianwalter/dot@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@ianwalter/dot/-/dot-1.0.1.tgz#a377ea396c214240c63f93763e8171948dac5fcb"
+  integrity sha512-S41sj/Bg92az/NxRwy+TyvXfWcXAE9rEZOBe1bGV7TOHUJocgsSeK9fWGALCopRlL1LSt1ljD7mWws1ywRcujg==
+
 "@ianwalter/eslint-config@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@ianwalter/eslint-config/-/eslint-config-5.1.0.tgz#4fdb865b537da0eec3a4bba86c7b79db2cfa1ec2"
