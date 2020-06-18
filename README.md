@@ -49,7 +49,7 @@ import log from '@ianwalter/log'
 
 // Allows outputting log statements from loggers who have namespaces that match
 // 'app.*'.
-log.update({ allowedNamespace: 'app.*' })
+log.update({ unrestricted: 'app.*' })
 
 // Create a logger that has an allowed namesapce.
 const serverLog = log.ns('app.server')

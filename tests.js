@@ -36,8 +36,8 @@ test('works with signale', t => {
   t.expect(stdout).toContain('Whoop! Whoop!')
 })
 
-test('allowedNamespace', t => {
-  const serverLog = log.create({ allowedNamespace: 'server.*', logger })
+test('unrestricted', t => {
+  const serverLog = log.create({ unrestricted: 'server.*', logger })
   t.expect(serverLog.debug('TEST1')).toBeUndefined()
   t.expect(serverLog.ns('server.workers').debug('TEST2')).toBe('TEST2')
   t.expect(serverLog.debug('TEST3')).toBeUndefined()

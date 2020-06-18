@@ -28,8 +28,8 @@ function addTypes (log) {
         // Check if the type is a log level. If it is, determine if the items
         // can be logged based on it's position relative to the current log
         // level or whether the namespace on the logger instance is allowed.
-        const namespaceIsAllowed = this.options.allowedNamespace && match(
-          this.options.allowedNamespace,
+        const namespaceIsAllowed = this.options.unrestricted && match(
+          this.options.unrestricted,
           this.options.namespace
         )
         const typeIndex = this.options.levels.indexOf(type)
