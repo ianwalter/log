@@ -5,7 +5,7 @@
   "main": "dist/log.js",
   "module": "dist/log.m.js",
   "scripts": {
-    "lint": "eslint index.js tests",
+    "lint": "eslint .",
     "pretest": "dist",
     "test": "bff"
   },
@@ -47,6 +47,9 @@
       "@ianwalter/eslint-config"
     ]
   },
+  "eslintIgnore": [
+    "dist"
+  ],
   "renovate": {
     "extends": [
       "@ianwalter"
