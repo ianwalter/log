@@ -7,8 +7,7 @@ const levels = [
   'info', // For general logging statements.
   'warn', // For warning about issues that are not necessarily errors.
   'error', // For normal errors.
-  'fatal', // For unrecoverable errors.
-  'write' // For writing statements not bound by a log level.
+  'fatal' // For unrecoverable errors.
 ]
 const defaultOptions = {
   levels,
