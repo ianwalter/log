@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/ianwalter/log#readme",
   "dependencies": {
-    "@ianwalter/dot": "^1.0.1",
+    "@ianwalter/dot": "^1.0.2",
     "@ianwalter/merge": "^9.0.1"
   },
   "devDependencies": {
